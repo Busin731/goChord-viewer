@@ -1,7 +1,6 @@
 # GoChord Viewer
 
-Inspired by: https://github.com/buzcarter/UkeGeeks
-Adaptation for Guitar
+Inspired by: https://github.com/buzcarter/UkeGeeks (Adaptation for Guitar)
 
 A JavaScript library for parsing and formatting ChordPro songs with chord diagrams.
 
