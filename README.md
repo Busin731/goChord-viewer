@@ -3,7 +3,7 @@
 Inspired by: https://github.com/buzcarter/UkeGeeks
 Adaptation for Guitar
 
-A JavaScript library for parsing and formatting ChordPro songs.
+A JavaScript library for parsing and formatting ChordPro songs with chord diagrams.
 
 ## Overview
 Reads marked-up music (lyrics + chords) extracting all of the chords used.
