@@ -1,0 +1,33 @@
+{
+  "name": "@jrmora/gochord-viewer",
+  "version": "0.1.0",
+  "description": "A JavaScript library for parsing and formatting ChordPro songs.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrmora/goChord-viewer.git"
+  },
+  "engines": {
+    "node": ">=4.2.4"
+  },
+  "keywords": [
+    "chordpro",
+    "viewer",
+    "gochord",
+    "chord",
+    "diagrams"
+  ],
+  "author": "Jaime Mora <jrmora33@gmail.com> (http://gochord.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jrmora/goChord-viewer/issues"
+  },
+  "homepage": "https://github.com/jrmora/goChord-viewer#readme",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  }
+}
