@@ -6,4 +6,4 @@ Adaptation for Guitar
 A JavaScript library for parsing and formatting ChordPro songs.
 Creates fingering diagrams.
 
-#### Part of [bpmn.io](https://gochord.com/)
+#### Part of [goChord](https://gochord.com/)
