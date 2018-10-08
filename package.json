@@ -15,18 +15,22 @@
     "viewer",
     "gochord",
     "chord",
-    "diagrams"
+    "diagrams",
+    "canvas"
   ],
-  "author": "Jaime Mora <jrmora33@gmail.com> (http://gochord.com)",
+  "author": "Jaime Mora (http://gochord.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jrmora/goChord-viewer/issues"
   },
   "homepage": "https://github.com/jrmora/goChord-viewer#readme",
   "scripts": {
-    "test": "mocha --reporter spec"
+    "test": "mocha --reporter spec",
+    "start": "babel-node index.js --presets es2015"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "chai": "^4.2.0",
     "mocha": "^5.2.0"
   }

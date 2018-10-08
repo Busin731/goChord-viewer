@@ -1,0 +1,276 @@
+/* You can add global styles to this file, and also import other style files */
+
+.gc-song-wrap {
+  font-size: 100%;
+}
+.gc-song-wrap,
+.gc-song-wrap h5,
+.gc-song-wrap h6,
+.gc-song-wrap pre,
+.gc-song-wrap code,
+.gc-song-wrap strong,
+.gc-song-wrap em {
+  font-family: inherit;
+  font-weight: normal;
+  font-size: inherit;
+  font-style: normal;
+  float: none;
+  line-height: 1;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+.gc-song-wrap pre {
+  background-color: transparent;
+}
+
+.gc-grouped:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.gc-grouped {
+  display: block;
+}
+.gc-grouped {
+  display: inline-block;
+}
+.ie8 .gc-grouped {
+  display: block;
+}
+* html .gc-grouped {
+  height: 1%;
+}
+/* LAYOUT (2-COLUMNS)
+  ------------------------------ */
+.gcLayoutTwoColumn .gc-diagrams-wrap {
+  float: right;
+  width: 225px;
+}
+.gcLayoutTwoColumn .gc-source-wrap {
+  margin-left: 0px;
+}
+/* CHORD CANVAS (BLOCKS)
+  ------------------------------ */
+.gc-diagrams-wrap canvas {
+  float: left;
+  margin-right: 5px;
+}
+.gcIgnoredChords {
+  clear: left;
+  font-size: 0.9em;
+  padding: 0 0 0.5em;
+}
+/*
+  ------------------------------ */
+.gc-source-wrap h5,
+.gc-source-wrap h6 {
+  border-left: solid 0.5em #ccc;
+  color: #036;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.2em;
+  font-style: italic;
+  line-height: 1;
+  margin: 0.4em 0 1em;
+  padding: 0.2em 0;
+  text-indent: 2.3em;
+}
+.gc-source-wrap h6 {
+  font-size: 0.9em;
+}
+.gc-source-wrap h5 + h6 {
+  margin-top: -1em;
+}
+.gc-source-wrap pre {
+  color: #333;
+  font-family: inherit;
+  padding-top: 0.4em;
+  white-space: pre;
+}
+.gc-source-wrap pre + h6 {
+  margin-top: 2.5em;
+}
+.ie .gc-source-wrap pre {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+/* CHORUS BLOCK
+  ------------------------------ */
+.gc-song-wrap .gcChorus {
+  border-left: solid 3px #ddd;
+  margin: 1em 0 2.3em;
+}
+.gcChorus pre {
+  margin-left: 1em;
+}
+.ie .gcChorus h6,
+.gcChorus > h6 {
+  font-size: 1.2em;
+  text-indent: 0.4em;
+}
+.gc-song-wrap pre + .gcChorus {
+  margin-top: 3.5em;
+}
+/* TABS
+  ------------------------------ */
+.gc-song-wrap .gcTabs {
+  margin: 0;
+  padding: 0;
+}
+.gc-song-wrap .gcTabs + .gcPlain {
+  margin: 0 0 1em;
+  padding: 0;
+}
+.gcTabs canvas {
+  max-width: 100%;
+}
+/* PLACE CHORDS ABOVE TEXT
+  ------------------------------ */
+.gc-song-wrap .gcChords {
+  line-height: 3;
+}
+.gcChords code {
+  color: #efefef;
+  display: inline-block; /* WebKit bug */
+  /* height:1.2em; /* WebKit bug */
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  /* font-size:1.2em; */
+  font-weight: normal;
+  position: relative;
+  vertical-align: middle; /* now fix the fix for Firefox */
+}
+.gcInline .gcChords code {
+  color: #f2f2f2;
+  display: inline;
+  vertical-align: inherit;
+}
+.gcChords code strong {
+  left: -4px;
+  position: absolute;
+  top: -2em;
+}
+.gcChords code em {
+  color: #d20;
+  margin: 0 0px;
+  font-size: small;
+}
+.ie .gcChords {
+  line-height: 2.6;
+}
+.ie code strong,
+.ie code em {
+  font-weight: normal;
+  font-style: normal;
+}
+/* SHOW CHORD NAMES INLINE
+  ------------------------------ */
+.gc-song-wrap .gcInline,
+.gc-song-wrap .gcInline pre,
+.gc-song-wrap.gcInline pre /* added for Editor Plus -- required? */
+ {
+  line-height: 1.8;
+}
+.gcInline code {
+  padding-left: 0.1em;
+}
+.gcInline code strong {
+  position: relative;
+  top: auto;
+  left: auto;
+}
+/* PLAIN (lyrics only) Blocks
+  ------------------------------ */
+.gcPlain + h6 {
+  margin-top: 1.5em;
+}
+/* CHORD-ONLY (NO LYRICS) BLOCKS
+  ------------------------------ */
+.gc-song-wrap .gcNoLyrics {
+  line-height: 2;
+  padding: 0 0 1.2em;
+}
+.gcNoLyrics + h6 {
+  margin-top: 0.5em;
+}
+.gcNoLyrics code {
+  height: auto;
+  vertical-align: baseline;
+}
+.gcNoLyrics code strong {
+  position: relative;
+  top: auto;
+  left: auto;
+}
+/* CHORD-ONLY (NO LYRICS) BLOCKS
+  ------------------------------ */
+.gcNoChords aside {
+  display: none;
+}
+.gcNoChords article {
+  margin-left: 0;
+}
+/* SHOW CHORD DIAGRAMS INLINE
+  See also JS class: Settings.inlineFretBox
+  ------------------------------ */
+.gcInlineDiagrams .gcChords {
+  line-height: 95px;
+}
+.gcInlineDiagrams .gcNoLyrics code {
+  vertical-align: text-top;
+}
+.gcInlineDiagrams .gcNoLyrics strong {
+  position: absolute;
+}
+.gcInlineDiagrams .gcChords + .gcPlain {
+  padding-bottom: 40px;
+}
+.gcInlineDiagrams h6 + .gcChords {
+  padding-top: 20px;
+}
+.gcInlineDiagrams code {
+  font-size: 0.8em;
+  font-weight: normal;
+}
+.gcInlineDiagrams .gcChords code strong {
+  left: 0;
+  line-height: 1;
+  text-align: center;
+  top: -72px;
+  width: 40px;
+}
+.gcChords code canvas {
+  left: 0;
+  position: absolute;
+  top: -60px;
+}
+/* TODO: problem with packing */
+.gc-song-wrap .gcInlineSpacer {
+  display: inline-block;
+  line-height: 1px;
+  width: 40px;
+}
+/* Multi-Column Layouts
+  ------------------------------ */
+.gcWrap .gcColumn {
+  float: left;
+}
+.gcColumnCount2 .gcColumn {
+  width: 49.5%;
+}
+.gcColumnCount3 .gcColumn {
+  width: 32.5%;
+}
+.gcColumnCount4 .gcColumn {
+  width: 24.5%;
+}
+/* Pagebreaks
+  ------------------------------ */
+.gcNewPage {
+  border-width: 0;
+  border-top: solid 1px #f2f2f2;
+  margin: 0;
+  page-break-before: always;
+}
