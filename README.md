@@ -18,7 +18,13 @@ Generates chord diagrams using HTML5 &lt;canvas&gt; and rewrites the music with 
 
 ## Demo
 1.  Clone
-2.  ```bash npm i``` --Install dependencies
-3.  ```bash npm run build``` --Bundle js and css files with webpack (the output will be in dist folder)
+2.  Install dependencies
+```bash 
+npm i
+```
+3.  Bundle js and css files with webpack (the output will be in dist folder)
+```bash 
+npm run build
+```
 4.  Open the dist/index.html on the browser to see the result!
 #.  You want change the songText input in src/index.js
