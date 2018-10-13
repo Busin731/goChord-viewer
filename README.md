@@ -27,4 +27,4 @@ npm i
 npm run build
 ```
 4.  Open the dist/index.html on the browser to see the result!
-#.  You want change the songText input in src/index.js
+5.  (Optional) You want change the songText input in src/index.js and repeat steps 3 and 4
