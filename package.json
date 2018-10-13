@@ -1,37 +1,42 @@
 {
-  "name": "@jrmora/gochord-viewer",
-  "version": "0.1.0",
-  "description": "A JavaScript library for parsing and formatting ChordPro songs.",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jrmora/goChord-viewer.git"
-  },
-  "engines": {
-    "node": ">=4.2.4"
-  },
-  "keywords": [
-    "chordpro",
-    "viewer",
-    "gochord",
-    "chord",
-    "diagrams",
-    "canvas"
-  ],
-  "author": "Jaime Mora (http://gochord.com)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/jrmora/goChord-viewer/issues"
-  },
-  "homepage": "https://github.com/jrmora/goChord-viewer#readme",
-  "scripts": {
-    "test": "mocha --reporter spec",
-    "start": "babel-node index.js --presets es2015"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "chai": "^4.2.0",
-    "mocha": "^5.2.0"
-  }
+    "name": "@jrmora/gochord-viewer",
+    "version": "0.1.0",
+    "description": "A JavaScript library for parsing and formatting ChordPro songs.",
+    "private": true,
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jrmora/goChord-viewer.git"
+    },
+    "engines": {
+        "node": ">=4.2.4"
+    },
+    "keywords": [
+        "chordpro",
+        "gochord",
+        "viewer",
+        "chord",
+        "diagrams",
+        "canvas",
+        "guitar"
+    ],
+    "author": "Jaime Mora (http://gochord.com)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/jrmora/goChord-viewer/issues"
+    },
+    "homepage": "https://github.com/jrmora/goChord-viewer#readme",
+    "scripts": {
+        "test": "mocha --reporter spec",
+        "build": "webpack"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.1.2",
+        "@babel/preset-env": "^7.1.0",
+        "babel-loader": "^8.0.4",
+        "css-loader": "^1.0.0",
+        "style-loader": "^0.23.1",
+        "webpack": "^4.20.2",
+        "webpack-cli": "^3.1.2"
+    },
+    "dependencies": {}
 }

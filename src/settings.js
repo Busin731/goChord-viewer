@@ -10,332 +10,332 @@ import { Definitions } from "./definitions";
  * @singleton
  */
 export const Settings = (() => {
-  /**
-   * attach public members to this object
-   * @property _public
-   * @type {Object}
-   */
-  const _public = {};
-
-  /**
-   * Chord Diagram Font styles -- font size, font-weight, font-face stack, etc.
-   * @property fonts
-   * @type JSON Object
-   */
-  // JRM: pasa de 9 a 6, 14 a 10, 13 a 10
-  _public.fonts = {
-    dot: "6pt Arial Black,Arial",
-    text: "bold 10pt Arial",
-    fret: "bold 10pt Arial"
-  };
-
-  /**
-   * Chord Diagram Colors for fretboard's grid lines and text. Don't use shorthand (i.e. "#0ff")
-   * as this might cause a problem with IE canvas.
-   * @property colors
-   * @type JSON Object
-   */
-  _public.colors = {
-    fretLines: "#003366",
-    dots: "#ff0000",
-    dotText: "#ffffff",
-    text: "#000000",
-    fretText: "#4a4a4a",
-    // a muted string's 'X' stroke color
-    xStroke: "#444444"
-  };
-
-  /* Standard Fretbox Options, these properties documented individually */
-  _public.fretBox = {
     /**
-     * True if chord name and finger "number" are to be drawn on canvas.
-     * By default normal chord diagrams have text (TRUE) whereas inlineDiagrams
-     * (i.e. chord diagrams shown above lyrics) do NOT as they are too small
-     * (thus inlineFretbox.showText is FALSE)
-     * @property fretBox.showText
-     * @type bool
+     * attach public members to this object
+     * @property _public
+     * @type {Object}
      */
-    showText: true,
+    const _public = {};
+
     /**
-     * Chord Box's Bounding height
-     * @property fretBox.height
+     * Chord Diagram Font styles -- font size, font-weight, font-face stack, etc.
+     * @property fonts
+     * @type JSON Object
+     */
+    // JRM: pasa de 9 a 6, 14 a 10, 13 a 10
+    _public.fonts = {
+        dot: "6pt Arial Black,Arial",
+        text: "bold 10pt Arial",
+        fret: "bold 10pt Arial"
+    };
+
+    /**
+     * Chord Diagram Colors for fretboard's grid lines and text. Don't use shorthand (i.e. "#0ff")
+     * as this might cause a problem with IE canvas.
+     * @property colors
+     * @type JSON Object
+     */
+    _public.colors = {
+        fretLines: "#003366",
+        dots: "#ff0000",
+        dotText: "#ffffff",
+        text: "#000000",
+        fretText: "#4a4a4a",
+        // a muted string's 'X' stroke color
+        xStroke: "#444444"
+    };
+
+    /* Standard Fretbox Options, these properties documented individually */
+    _public.fretBox = {
+        /**
+         * True if chord name and finger "number" are to be drawn on canvas.
+         * By default normal chord diagrams have text (TRUE) whereas inlineDiagrams
+         * (i.e. chord diagrams shown above lyrics) do NOT as they are too small
+         * (thus inlineFretbox.showText is FALSE)
+         * @property fretBox.showText
+         * @type bool
+         */
+        showText: true,
+        /**
+         * Chord Box's Bounding height
+         * @property fretBox.height
+         * @type int
+         */
+        // JRM: pasa de 150 a 100
+        height: 100,
+        /**
+         * Chord Box's Bounding width
+         * @property fretBox.width
+         * @type int
+         */
+        // JRM: pasa de 100 a 90
+        width: 90,
+        /**
+         * Row Height -- vertical height between frets (pixels)
+         * @property fretBox.fretSpace
+         * @type int
+         */
+        // JRM: pasa de 20 a 14
+        fretSpace: 14,
+        /**
+         * String Spacing -- horizontal distance between strings (pixels)
+         * @property fretBox.stringSpace
+         * @type int
+         */
+        // JRM: pasa de 20 a 11
+        stringSpace: 11,
+        /**
+         * Dot (finger position) radius in pixels
+         * @property fretBox.dotRadius
+         * @type int
+         */
+        // JRM: pasa de 8 a 4.2
+        dotRadius: 4.2,
+        /**
+         * Fretboard line width in pixels
+         * @property fretBox.lineWidth
+         * @type decimal
+         */
+        // JRM: pasa de 1.6 a 1
+        lineWidth: 1,
+        /**
+         * top-left position -- the offset for chord box.
+         * @property fretBox.topLeftPos
+         * @type JSON
+         */
+        topLeftPos: {
+            x: 22,
+            y: 25
+        },
+        /**
+         * muted string "X" width of the 'X' crossbars. Recommend this be about 0.5 to 0.9 relative to stringSpace.
+         * @property fretBox.xWidth
+         * @type decimal
+         */
+        // JRM: pasa de 20 a 10
+        xWidth: 0.45 * 10,
+        /**
+         * muted string "X" stroke thickness. Recommend this be about 1.3 to 2.1 relative to lineWidth
+         * @property fretBox.xStroke
+         * @type decimal
+         */
+        // JRM: pasa de 1.6 * 1.6 a 1
+        xStroke: 1
+    };
+
+    /**
+     * Layout of Chord Digrams when inlineFredBoxes are being used. Identical in
+     * structure to "fretBox". See fretBox for properties.
+     * @property layout
+     * @type JSON Object
+     */
+    _public.inlineFretBox = {
+        showText: false,
+        height: 50,
+        width: 40,
+        fretSpace: 9,
+        stringSpace: 7,
+        dotRadius: 3,
+        lineWidth: 1,
+        topLeftPos: {
+            x: 10,
+            y: 2
+        },
+        xWidth: 0.7 * 7,
+        xStroke: 1.4 * 1,
+        fonts: {
+            // JRM: pasa de 8 a 4
+            dot: "4pt Arial",
+            text: "4pt Arial",
+            fret: "4pt Arial"
+        }
+    };
+
+    /**
+     * ID's of key HTML page elements
+     * @property ids
+     * @type JSON Object
+     */
+    _public.ids = {
+        songText: "gcSongText", // element holding the song's text
+        canvas: "gcChordsCanvas", // canvas
+        container: "gcSongContainer" // wraps BOTH Song Text and Chord Canvas
+    };
+
+    /**
+     * CSS Class names used to find page elements-- be careful if renaming!
+     * @property wrapClasses
+     * @type JSON Object
+     */
+    _public.wrapClasses = {
+        wrap: "gc-song-wrap", // wraps BOTH Song Text and Chord Canvas
+        diagrams: "gc-diagrams-wrap", // canvas
+        text: "gc-source-wrap" // element holding the song's text
+    };
+
+    /**
+     * Options (Features) you can turn on or off
+     * @property opts
+     * @type JSON Object
+     */
+    _public.opts = {
+        columnsEnabled: true,
+        /**
+         * the [ and ] surrounding chord names often looks bad in print (usually only good when inline)
+         * set true to keep then, false to get rid of the buggers.
+         * @property opts.retainBrackets
+         * @type Boolean
+         */
+        retainBrackets: false,
+        /**
+         * if TRUE chords in the "commonChords" list will be ignored (excluded) from having thier
+         * master chord diagram drawn
+         * @property opts.ignoreCommonChords
+         * @type Boolean
+         */
+        ignoreCommonChords: false,
+        /**
+         * If true chord reference diagrams are sorted alphabetically, otherwise chords are shown in the
+         * order in which they appear within the song.
+         * @property opts.sortAlphabetical
+         * @type Boolean
+         */
+        sortAlphabetical: false,
+        /**
+         * if TRUE chords that overlap each other (in the music area) will have their spacing adjuste
+         * to prevent overlapping.
+         * @property opts.autoFixOverlaps
+         * @type Boolean
+         */
+        autoFixOverlaps: true
+    };
+
+    /**
+     * If TRUE the Chord Diagram is drawn ABOVE lyrics
+     * @property inlineDiagrams
+     * @type Bool
+     */
+    _public.inlineDiagrams = false;
+
+    /**
+     * Number of frets to draw. Default is 5
+     * @property numFrets
      * @type int
      */
-    // JRM: pasa de 150 a 100
-    height: 100,
+    _public.numFrets = 5;
+
     /**
-     * Chord Box's Bounding width
-     * @property fretBox.width
-     * @type int
+     * Array of string names
+     * @property tuning
+     * @type string Array
      */
-    // JRM: pasa de 100 a 90
-    width: 90,
+    // JRM: AfinaciÃ³n para guitarra
+    _public.tuning = ["E", "A", "D", "G", "B", "E"];
+
     /**
-     * Row Height -- vertical height between frets (pixels)
-     * @property fretBox.fretSpace
-     * @type int
+     * The initial tuning when page first loads, used in GcViewer.init.
+     * @property defaultInstrument
+     * @type {enum_int}
      */
-    // JRM: pasa de 20 a 14
-    fretSpace: 14,
+    _public.defaultInstrument = Definitions.instrument.guitar;
+
     /**
-     * String Spacing -- horizontal distance between strings (pixels)
-     * @property fretBox.stringSpace
-     * @type int
+     * TODO: Clean-up Tab Options!!
+     * @property tabs
+     * @type JSON Object
      */
-    // JRM: pasa de 20 a 11
-    stringSpace: 11,
+    _public.tabs = {
+        lineSpacing: 16, // pixels between lines (or strings)
+        noteSpacing: 14, // pixels between finger dots
+        lineWidth: 1, // pixels
+        lineColor: "#999999", // hex
+        labelWidth: 12, // pixels, how much room to allow for string names, eg, "G" or "A"
+        labelFont: "10pt Arial, Helvetica, Verdana, Geneva, sans-serif",
+        dotColor: "#eaeaea", // hex
+        dotRadius: 10, // pixels, finger dot's radius
+        textFont: "bold 12pt Arial, Helvetica, Verdana, Geneva, sans-serif",
+        textColor: "#000000",
+        bottomPadding: 10 // extra blank space added to bottom of diagram
+    };
+
+    // Info about runtime environment. Not really a setting.
+    _public.environment = {
+        /**
+         * set in GcViewer. True if UserAgent is Internet Explorer
+         * @property environment.isIe
+         * @type bool
+         */
+        isIe: false
+    };
+
     /**
-     * Dot (finger position) radius in pixels
-     * @property fretBox.dotRadius
-     * @type int
+     * List of common chords to be "ignored" (won't show master chord diagrams)
+     * @property commonChords
+     * @type string Array
      */
-    // JRM: pasa de 8 a 4.2
-    dotRadius: 4.2,
+    _public.commonChords = ["A", "B", "C", "D", "E", "F", "G", "Am"];
+
     /**
-     * Fretboard line width in pixels
-     * @property fretBox.lineWidth
-     * @type decimal
+     * TODO: determine minimum value... 1?
+     * @method _scaleNode
+     * @private
+     * @param node {datatype} Description
+     * @param multiplier {int} see scale method's parameter
+     * @return mixed
      */
-    // JRM: pasa de 1.6 a 1
-    lineWidth: 1,
+    const _scaleNode = (node, multiplier) => {
+        if (typeof node == "number") {
+            return node * multiplier;
+        } else if (typeof node == "object") {
+            for (const i in node) {
+                node[i] = _scaleNode(node[i], multiplier);
+            }
+            return node;
+        }
+        return node;
+    };
+
+    const _sizeRe = /\b(\d+)(pt|px)\b/;
+
     /**
-     * top-left position -- the offset for chord box.
-     * @property fretBox.topLeftPos
-     * @type JSON
+     * TODO: determine minimum font size... 5pt/px?
+     * @method _scaleFont
+     * @private
+     * @param font {string} Description
+     * @param multiplier {int} see scale method's parameter
+     * @return {void}
      */
-    topLeftPos: {
-      x: 22,
-      y: 25
-    },
+    const _scaleFont = (font, multiplier) => {
+        const bits = font.match(_sizeRe);
+        if (bits.length < 2) {
+            return font;
+        }
+        const size = parseInt(bits[1], 10) * multiplier;
+        return font.replace(_sizeRe, size + bits[2]);
+    };
+
     /**
-     * muted string "X" width of the 'X' crossbars. Recommend this be about 0.5 to 0.9 relative to stringSpace.
-     * @property fretBox.xWidth
-     * @type decimal
+     * Scales the standard chord diagram's dimensions and font sizes by multiplying
+     * all falues by passed in value. Note: this is currently a destructive change: no
+     * backup of original values is retained.
+     * @method scale
+     * @param multiplier {int}
+     * @return {void}
      */
-    // JRM: pasa de 20 a 10
-    xWidth: 0.45 * 10,
-    /**
-     * muted string "X" stroke thickness. Recommend this be about 1.3 to 2.1 relative to lineWidth
-     * @property fretBox.xStroke
-     * @type decimal
+    _public.scale = function(multiplier) {
+        if (multiplier == 1.0) {
+            return;
+        }
+
+        for (const i in this.fonts) {
+            this.fonts[i] = _scaleFont(this.fonts[i], multiplier);
+        }
+
+        // Note getting x/y scaled.
+        this.fretBox = _scaleNode(this.fretBox, multiplier);
+    };
+
+    /* return our public interface
      */
-    // JRM: pasa de 1.6 * 1.6 a 1
-    xStroke: 1
-  };
-
-  /**
-   * Layout of Chord Digrams when inlineFredBoxes are being used. Identical in
-   * structure to "fretBox". See fretBox for properties.
-   * @property layout
-   * @type JSON Object
-   */
-  _public.inlineFretBox = {
-    showText: false,
-    height: 50,
-    width: 40,
-    fretSpace: 9,
-    stringSpace: 7,
-    dotRadius: 3,
-    lineWidth: 1,
-    topLeftPos: {
-      x: 10,
-      y: 2
-    },
-    xWidth: 0.7 * 7,
-    xStroke: 1.4 * 1,
-    fonts: {
-      // JRM: pasa de 8 a 4
-      dot: "4pt Arial",
-      text: "4pt Arial",
-      fret: "4pt Arial"
-    }
-  };
-
-  /**
-   * ID's of key HTML page elements
-   * @property ids
-   * @type JSON Object
-   */
-  _public.ids = {
-    songText: "gcSongText", // element holding the song's text
-    canvas: "gcChordsCanvas", // canvas
-    container: "gcSongContainer" // wraps BOTH Song Text and Chord Canvas
-  };
-
-  /**
-   * CSS Class names used to find page elements-- be careful if renaming!
-   * @property wrapClasses
-   * @type JSON Object
-   */
-  _public.wrapClasses = {
-    wrap: "gc-song-wrap", // wraps BOTH Song Text and Chord Canvas
-    diagrams: "gc-diagrams-wrap", // canvas
-    text: "gc-source-wrap" // element holding the song's text
-  };
-
-  /**
-   * Options (Features) you can turn on or off
-   * @property opts
-   * @type JSON Object
-   */
-  _public.opts = {
-    columnsEnabled: true,
-    /**
-     * the [ and ] surrounding chord names often looks bad in print (usually only good when inline)
-     * set true to keep then, false to get rid of the buggers.
-     * @property opts.retainBrackets
-     * @type Boolean
-     */
-    retainBrackets: false,
-    /**
-     * if TRUE chords in the "commonChords" list will be ignored (excluded) from having thier
-     * master chord diagram drawn
-     * @property opts.ignoreCommonChords
-     * @type Boolean
-     */
-    ignoreCommonChords: false,
-    /**
-     * If true chord reference diagrams are sorted alphabetically, otherwise chords are shown in the
-     * order in which they appear within the song.
-     * @property opts.sortAlphabetical
-     * @type Boolean
-     */
-    sortAlphabetical: false,
-    /**
-     * if TRUE chords that overlap each other (in the music area) will have their spacing adjuste
-     * to prevent overlapping.
-     * @property opts.autoFixOverlaps
-     * @type Boolean
-     */
-    autoFixOverlaps: true
-  };
-
-  /**
-   * If TRUE the Chord Diagram is drawn ABOVE lyrics
-   * @property inlineDiagrams
-   * @type Bool
-   */
-  _public.inlineDiagrams = false;
-
-  /**
-   * Number of frets to draw. Default is 5
-   * @property numFrets
-   * @type int
-   */
-  _public.numFrets = 5;
-
-  /**
-   * Array of string names
-   * @property tuning
-   * @type string Array
-   */
-  // JRM: Afinación para guitarra
-  _public.tuning = ["E", "A", "D", "G", "B", "e"];
-
-  /**
-   * The initial tuning when page first loads, used in GcViewer.init.
-   * @property defaultInstrument
-   * @type {enum_int}
-   */
-  _public.defaultInstrument = Definitions.instrument.guitar;
-
-  /**
-   * TODO: Clean-up Tab Options!!
-   * @property tabs
-   * @type JSON Object
-   */
-  _public.tabs = {
-    lineSpacing: 16, // pixels between lines (or strings)
-    noteSpacing: 14, // pixels between finger dots
-    lineWidth: 1, // pixels
-    lineColor: "#999999", // hex
-    labelWidth: 12, // pixels, how much room to allow for string names, eg, "G" or "A"
-    labelFont: "10pt Arial, Helvetica, Verdana, Geneva, sans-serif",
-    dotColor: "#eaeaea", // hex
-    dotRadius: 10, // pixels, finger dot's radius
-    textFont: "bold 12pt Arial, Helvetica, Verdana, Geneva, sans-serif",
-    textColor: "#000000",
-    bottomPadding: 10 // extra blank space added to bottom of diagram
-  };
-
-  // Info about runtime environment. Not really a setting.
-  _public.environment = {
-    /**
-     * set in GcViewer. True if UserAgent is Internet Explorer
-     * @property environment.isIe
-     * @type bool
-     */
-    isIe: false
-  };
-
-  /**
-   * List of common chords to be "ignored" (won't show master chord diagrams)
-   * @property commonChords
-   * @type string Array
-   */
-  _public.commonChords = ["A", "B", "C", "D", "E", "F", "G", "Am"];
-
-  /**
-   * TODO: determine minimum value... 1?
-   * @method _scaleNode
-   * @private
-   * @param node {datatype} Description
-   * @param multiplier {int} see scale method's parameter
-   * @return mixed
-   */
-  const _scaleNode = (node, multiplier) => {
-    if (typeof node == "number") {
-      return node * multiplier;
-    } else if (typeof node == "object") {
-      for (const i in node) {
-        node[i] = _scaleNode(node[i], multiplier);
-      }
-      return node;
-    }
-    return node;
-  };
-
-  const _sizeRe = /\b(\d+)(pt|px)\b/;
-
-  /**
-   * TODO: determine minimum font size... 5pt/px?
-   * @method _scaleFont
-   * @private
-   * @param font {string} Description
-   * @param multiplier {int} see scale method's parameter
-   * @return {void}
-   */
-  const _scaleFont = (font, multiplier) => {
-    const bits = font.match(_sizeRe);
-    if (bits.length < 2) {
-      return font;
-    }
-    const size = parseInt(bits[1], 10) * multiplier;
-    return font.replace(_sizeRe, size + bits[2]);
-  };
-
-  /**
-   * Scales the standard chord diagram's dimensions and font sizes by multiplying
-   * all falues by passed in value. Note: this is currently a destructive change: no
-   * backup of original values is retained.
-   * @method scale
-   * @param multiplier {int}
-   * @return {void}
-   */
-  _public.scale = function(multiplier) {
-    if (multiplier == 1.0) {
-      return;
-    }
-
-    for (const i in this.fonts) {
-      this.fonts[i] = _scaleFont(this.fonts[i], multiplier);
-    }
-
-    // Note getting x/y scaled.
-    this.fretBox = _scaleNode(this.fretBox, multiplier);
-  };
-
-  /* return our public interface
-	 */
-  return _public;
+    return _public;
 })();

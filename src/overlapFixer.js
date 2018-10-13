@@ -1,7 +1,7 @@
 /**
  * Singleton to correct overlapping chord names/diagrams in songs rendered by UGS
  * @class OverlapFixer
- * @project goChord' GcViewer
+ * @static
  * @singleton
  */
 export const OverlapFixer = (() => {

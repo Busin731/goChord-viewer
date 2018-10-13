@@ -205,8 +205,9 @@ export const CpmParser = () => {
   var _export = song => {
     const nl = "\n";
     let html = "";
+      
     for (let i = 0; i < song.length; i++) {
-      // JRM: visualizar titulo, subtitulo, album y metadata(no visible por ahora)
+      // JRM: visualizar titulo, subtitulo, album y metadata(no visible por ahora)      
       if (song[i].type == _blockTypeEnum.Title) {
         html += `<h1>${song[i].lines[0]}</h1>${nl}`;
       } else if (song[i].type == _blockTypeEnum.Subtitle) {
@@ -351,14 +352,17 @@ export const CpmParser = () => {
       cmdArgs: /\{.+?:(.*)\}/gi,
       cmdVerb: /\{(.+?)\s*:.*\}/gi
     };
-    for (const i in song) {
-      for (const j in song[i].lines) {
+    for (const i in song) {      
+      for (const j in song[i].lines) {           
         if (regEx.instr.test(song[i].lines[j])) {
-          const args = song[i].lines[j].replace(regEx.cmdArgs, "$1");
+          let args = song[i].lines[j].replace(regEx.cmdArgs, "$1");
+          //JRM: Correction
+          args = ToolsLite.trim(args);
           let verb = song[i].lines[j]
             .replace(regEx.cmdVerb, "$1")
-            .toLowerCase();
+            .toLowerCase();            
           verb = verb.replace(/\r/, ""); // IE7 bug
+          verb = ToolsLite.trim(verb); // JRM: Correction bug
           const tmpBlk = {
             type: "",
             lines: []
