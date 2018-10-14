@@ -1,9 +1,9 @@
 ![Demo](https://github.com/jrmora/goChord-viewer/blob/master/GoChordViewer.png)
 
 # GoChord Viewer
-A JavaScript library for parsing and formatting ChordPro songs with chord diagrams.
+A JavaScript library for parsing and formatting ChordPro songs with chord diagrams:
 
-Inspired by: https://github.com/buzcarter/UkeGeeks
+Inspired by: https://github.com/buzcarter/UkeGeeks with the following modifications:
 
 * Adaptation for Guitar
 * Upgraded to ES6 
