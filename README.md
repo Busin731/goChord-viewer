@@ -36,32 +36,34 @@ npm run build
 Essentially, it looks like this:
 
 ```
-{title: My Little Grass Shack in Kealakekua}
-{subtitle: GoChord-viewer example version}
+    {title: Praise Adonai}
+    {artist: Paul Baloche}
 
-{sot}
-E|-----2---2-----|-------3-3---
-B|---3---3---3---|-----0-------
-G|-2-------------|---0---------
-D|-2-------------|---0---------
-A|------1--------|-2-----------
-E|---------------|-----2-------
-{eot}
+    {sot}
+    E|-----2---2-----|-------3-3---
+    B|---3---3---3---|-----0-------
+    G|-2-------------|---0---------
+    D|---------------|---0---------
+    A|---------------|-2-----------
+    E|---------------|-------------
+    {eot}
 
-It won't be [G]long till my ship will be sailing
-Back to [A7]Kona
-A [D7]grand old place
-That's always fair to [B7]see... you're telling me
-I'm [E7]just a little Hawaiian and a homesick island boy
-I [A7]want to go back to my fish and poi
+    [Am]Who is like [F]Him,
+    The Lion and the [C]Lamb
+    Seated on the [G]throne    [E7]
+    [Am]Mountains bow [F]down
+    Every ocean [C]roars
+    To the Lord of [G]hosts    
 
-{start_of_chorus}
-I want to go [G]back to my little grass shack
-In Kealakekua, [A7]Hawaii
-Where the [D7]humu-humu nuku-nuku a pua'a
-Go swimming [G]by
-{end_of_chorus}
-[F]Raindrops keep falling on my [Fmaj7]head.
+    {start_of_chorus}
+    [F]Praise Ado[Am]nai
+    From the [G]rising of the sun
+    'Till the [Dm7]end of every [F]day[G]
+    [F]Praise Ado[Am]nai
+    All the [G]nations of the earth
+    All the [Dm7] Angels and the [F]Saints
+    [G]Sing [Bbsus2]praise
+    {end_of_chorus}
 ```
 
 ## Contribute
