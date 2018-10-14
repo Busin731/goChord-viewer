@@ -31,7 +31,7 @@ npm run build
 4.  Open the dist/index.html on the browser to see the result!
 5.  (Optional) You want change the songText input in src/index.js and repeat steps 3 and 4
 
-### ChordPro format: Lyrics and Chords
+## ChordPro format: Lyrics and Chords
 
 Essentially, it looks like this:
 
@@ -63,3 +63,8 @@ Go swimming [G]by
 {end_of_chorus}
 [F]Raindrops keep falling on my [Fmaj7]head.
 ```
+
+## Contribute
+
+Contributions are welcomed, especially in the fingers on chords:
+https://github.com/jrmora/goChord-viewer/blob/master/src/instrumentDefinitions.js
