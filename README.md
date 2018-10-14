@@ -1,6 +1,8 @@
 # GoChord Viewer
 A JavaScript library for parsing and formatting ChordPro songs with chord diagrams.
 
+![Demo](https://raw.github.com/jrmora/goChord-viewer/GoChordViewer.png)
+
 Inspired by: https://github.com/buzcarter/UkeGeeks
 
 * Adaptation for Guitar
@@ -29,10 +31,9 @@ npm run build
 4.  Open the dist/index.html on the browser to see the result!
 5.  (Optional) You want change the songText input in src/index.js and repeat steps 3 and 4
 
-### Lyrics and Chords
+### ChordPro format: Lyrics and Chords
 
-The input format is the ChordPro format. Essentially, it
-looks like this:
+Essentially, it looks like this:
 
 ```
 {title: My Little Grass Shack in Kealakekua}
