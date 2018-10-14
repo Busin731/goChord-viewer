@@ -1,6 +1,6 @@
 {
     "name": "@jrmora/gochord-viewer",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "description": "A JavaScript library for parsing and formatting ChordPro songs.",
     "private": true,
     "repository": {
