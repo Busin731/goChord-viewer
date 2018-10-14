@@ -34,7 +34,8 @@ npm run build
 The input format is the ChordPro format. Essentially, it
 looks like this:
 
-` {title: My Little Grass Shack in Kealakekua}
+```
+{title: My Little Grass Shack in Kealakekua}
     {subtitle: GoChord-viewer example version}
 
     {sot}
@@ -46,17 +47,6 @@ looks like this:
     E|---------------|-----2-------
     {eot}
 
-    {comment: Verse 1}
-    I want to go [G]back to my little grass shack
-    In Kealakekua, [A7]Hawaii
-    I want to [D7]be with all the kanes and wahines
-    That I used to [G]know... so long ago
-    I can [B7]hear the old guitars a-playing[E7]
-    On the beach at Honaunau
-    I can [A7]hear the old Hawaiians saying
-    "Komo [D7]mai no kaua i ka hale welakahau"
-
-    {comment: Verse 2}
     It won't be [G]long till my ship will be sailing
     Back to [A7]Kona
     A [D7]grand old place
@@ -71,4 +61,5 @@ looks like this:
     Where the [D7]humu-humu nuku-nuku a pua'a
     Go swimming [G]by
     {end_of_chorus}
-    [F]Raindrops keep falling on my [Fmaj7]head.` 
+    [F]Raindrops keep falling on my [Fmaj7]head.
+```
