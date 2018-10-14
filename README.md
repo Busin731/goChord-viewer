@@ -66,5 +66,6 @@ Go swimming [G]by
 
 ## Contribute
 
-Contributions are welcome, especially in the fingers on chords:
+Contributions are welcome, especially with the chords fingers:
+
 https://github.com/jrmora/goChord-viewer/blob/master/src/instrumentDefinitions.js
