@@ -17,7 +17,7 @@ export const InstrumentDefinitions = (() => {
         // Required: Instrument Name and Tuning (string names)
         // -------------------------------------------------------
         "{instrument: Guitar}",
-        "{tuning: E A D G B e}",
+        "{tuning: E A D G B E}",
         //  Ab returns G#
         "{define: Ab base 4 frets 1 3 3 2 1 1 fingers 0 0 0 0 0 0}",
         "{define: Ab+ frets x x 2 1 1 0 fingers 0 0 0 0 0 0}",
@@ -429,7 +429,8 @@ export const InstrumentDefinitions = (() => {
         "{define: G/B frets 0 0 0 2 3 2}",
         "{define: G/F# frets 0 0 0 2 2 2}",
         "{define: G/F frets 0 0 0 2 1 2}",
-        "{define: G7/B frets 0 0 0 2 1 2}"
+        "{define: G7/B frets 0 0 0 2 1 2}",
+        "{define: Bbsus2 frets x 1 3 3 1 1 fingers 0 1 3 4 1 1}"
     ];
 
     return _public;
