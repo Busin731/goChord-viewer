@@ -1,21 +1,15 @@
-/**
- * <ul>
- * <li>Project: GoChord Viewer for guitar (based on UkeGeeks' Scriptasaurus from Buz Carter)</li>
- * <li>Version: 0.1.0</li>
- * <li>Author: Jaime Mora</li>
- * <li>License MIT</li>
- * </ul>
- *
- * <h3>Overview</h3>
- * <p>Reads marked-up music (lyrics + chords) extracting all of the chords used;
- * Generates a chord diagrams using HTML5 &lt;canvas&gt; and rewrites the music with
- * standard HTML wrapping the chords.</p>
- */
-import { GcViewer } from "../src/gcViewer";
-import { css } from "../src/styles.css";
+'use strict';
+var gcViewer = require('../dist/main.js');
 
-function component() {
-    const chordSheet = `
+before(function() {
+    this.jsdom = require('jsdom-global')()
+})
+
+after(function() {
+    this.jsdom()
+})
+
+const chordSheet = `
     {title: Praise Adonai}
     {subtitle: GoChord viewer demo}
     {artist: Paul Baloche}
@@ -48,8 +42,5 @@ function component() {
     
     `.substring(1);
 
-    GcViewer.init(false);
-    GcViewer.run(chordSheet);
-}
-
-component();
+gcViewer.GcViewer.init(false);
+gcViewer.GcViewer.run(chordSheet);
