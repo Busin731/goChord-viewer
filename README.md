@@ -12,6 +12,7 @@ Inspired by: https://github.com/buzcarter/UkeGeeks with the following modificati
 - Beautify chord diagrams
 - Chord diagrams on right side
 - Bugs fixes
+- Bundled and minified to optimize performance
 
 ## Overview
 
@@ -30,21 +31,25 @@ $ npm i gochord-viewer
 
 ## Demo
 
+Open demo/index.html on the browser to see a webpage example.
+
+You can also modify the sources to see changes:
+
 1.  Clone
 2.  Install dependencies
 
-```bash
-npm i
+```sh
+$ npm i
 ```
 
+2.  Change the songText input in demo/sample.js (Or any source file in src)
 3.  Bundle js and css files with webpack (the output will be in dist folder)
 
-```bash
-npm run build
+```sh
+$ npm run build
 ```
 
-4.  Open the dist/index.html on the browser to see the result!
-5.  (Optional) You want change the songText input in test/test.js and repeat steps 3 and 4
+5.  Open demo/index.html on the browser to see the result!
 
 ## ChordPro format: Lyrics and Chords
 

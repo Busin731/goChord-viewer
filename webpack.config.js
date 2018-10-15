@@ -1,11 +1,15 @@
 const path = require('path');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-    entry: './index.js',
+    entry: './src/index.js',
+    plugins: [
+        new CleanWebpackPlugin(['dist'])
+    ],
     output: {
-        filename: 'main.js',
+        filename: 'gochord-viewer.bundle.js',
         path: path.resolve(__dirname, 'dist'),
-        library: 'GcViewer',
+        library: 'GoChordViewer',
         libraryTarget: 'umd'
     },
     module: {

@@ -12,7 +12,7 @@
  * standard HTML wrapping the chords.</p>
  */
 
-import { css } from "./src/styles.css";
+import { css } from "./styles.css";
 
-export { GcViewer } from './src/gcViewer';
-export { Settings } from './src/settings';
+export { Main } from './main';
+export { Settings } from './settings';

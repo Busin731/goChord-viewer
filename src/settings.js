@@ -233,7 +233,7 @@ export const Settings = (() => {
     _public.tuning = ["E", "A", "D", "G", "B", "E"];
 
     /**
-     * The initial tuning when page first loads, used in GcViewer.init.
+     * The initial tuning when page first loads, used in Main.init.
      * @property defaultInstrument
      * @type {enum_int}
      */
@@ -261,7 +261,7 @@ export const Settings = (() => {
     // Info about runtime environment. Not really a setting.
     _public.environment = {
         /**
-         * set in GcViewer. True if UserAgent is Internet Explorer
+         * set in Main. True if UserAgent is Internet Explorer
          * @property environment.isIe
          * @type bool
          */

@@ -1,15 +1,6 @@
 'use strict';
-var gcViewer = require('../dist/main.js');
 
-before(function() {
-    this.jsdom = require('jsdom-global')()
-})
-
-after(function() {
-    this.jsdom()
-})
-
-const chordSheet = `
+var chordSheet = `
     {title: Praise Adonai}
     {subtitle: GoChord viewer demo}
     {artist: Paul Baloche}
@@ -42,5 +33,5 @@ const chordSheet = `
     
     `.substring(1);
 
-gcViewer.GcViewer.init(false);
-gcViewer.GcViewer.run(chordSheet);
+GoChordViewer.Main.init(false);
+GoChordViewer.Main.run(chordSheet);

@@ -13,11 +13,11 @@ import { ToolsLite } from "./toolsLite";
  * Finds page HTML elements & creates goChord objects;
  * Reads song text, parses, draws choard diagrams.
  *
- * @class GcViewer
+ * @class Main
  * @static
  * @singleton
  */
-export const GcViewer = (() => {
+export const Main = (() => {
     /**
      * attach public members to this object
      * @property _public
@@ -46,7 +46,7 @@ export const GcViewer = (() => {
     };
 
     /**
-     * Runs all GcViewer methods using the element Ids defined in the Settings class.
+     * Runs all Main methods using the element Ids defined in the Settings class.
      * This is your "Do All". See Data.song for structure.
      * @method run
      * @return {songObject}

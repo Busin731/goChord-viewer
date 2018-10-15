@@ -1,6 +1,7 @@
 {
     "name": "gochord-viewer",
     "version": "0.1.0",
+    "main": "dist/gochord-viewer.bundle.js",
     "description": "A JavaScript library for parsing and formatting ChordPro songs.",
     "repository": {
         "type": "git",
@@ -25,17 +26,14 @@
     },
     "homepage": "https://github.com/jrmora/goChord-viewer#readme",
     "scripts": {
-        "test": "mocha -r jsdom-global/register",
-        "build": "webpack"
+        "build": "webpack --mode=production"
     },
     "devDependencies": {
         "@babel/core": "^7.1.2",
         "@babel/preset-env": "^7.1.0",
         "babel-loader": "^8.0.4",
+        "clean-webpack-plugin": "^0.1.19",
         "css-loader": "^1.0.0",
-        "jsdom": "12.2.0",
-        "jsdom-global": "3.0.2",
-        "mocha": "^5.2.0",
         "style-loader": "^0.23.1",
         "webpack": "^4.20.2",
         "webpack-cli": "^3.1.2"
