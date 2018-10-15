@@ -42,14 +42,14 @@ You can also modify the sources to see changes:
 $ npm i
 ```
 
-2.  Change the songText input in demo/sample.js (Or any source file in src)
-3.  Bundle js and css files with webpack (the output will be in dist folder)
+3.  Change the songText input in demo/sample.js (Or any source file in src)
+4.  Bundle files with webpack (the output will be in dist folder)
 
 ```sh
 $ npm run build
 ```
 
-5.  Open demo/index.html on the browser to see the result!
+5.  Open again demo/index.html to see the result!
 
 ## ChordPro format: Lyrics and Chords
 
