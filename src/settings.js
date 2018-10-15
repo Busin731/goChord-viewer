@@ -229,7 +229,7 @@ export const Settings = (() => {
      * @property tuning
      * @type string Array
      */
-    // JRM: AfinaciÃ³n para guitarra
+    // JRM: Afinación para guitarra
     _public.tuning = ["E", "A", "D", "G", "B", "E"];
 
     /**
@@ -316,7 +316,7 @@ export const Settings = (() => {
 
     /**
      * Scales the standard chord diagram's dimensions and font sizes by multiplying
-     * all falues by passed in value. Note: this is currently a destructive change: no
+     * all values by passed in value. Note: this is currently a destructive change: no
      * backup of original values is retained.
      * @method scale
      * @param multiplier {int}

@@ -1,7 +1,7 @@
 /**
  * <ul>
  * <li>Project: GoChord Viewer for guitar (based on UkeGeeks' Scriptasaurus from Buz Carter)</li>
- * <li>Version: 1.0.0</li>
+ * <li>Version: 0.1.0</li>
  * <li>Author: Jaime Mora</li>
  * <li>License MIT</li>
  * </ul>
@@ -11,12 +11,13 @@
  * Generates a chord diagrams using HTML5 &lt;canvas&gt; and rewrites the music with
  * standard HTML wrapping the chords.</p>
  */
-import { GcViewer } from "./gcViewer";
-import { css } from './styles.css';
+import { GcViewer } from "../src/gcViewer";
+import { css } from "../src/styles.css";
 
 function component() {
     const chordSheet = `
     {title: Praise Adonai}
+    {subtitle: GoChord viewer demo}
     {artist: Paul Baloche}
     
     {sot}
@@ -33,7 +34,8 @@ function component() {
     Seated on the [G]throne    [E7]
     [Am]Mountains bow [F]down
     Every ocean [C]roars
-    To the Lord of [G]hosts    
+    To the Lord of [G]hosts  
+
     {start_of_chorus}
     [F]Praise Ado[Am]nai
     From the [G]rising of the sun
@@ -43,6 +45,7 @@ function component() {
     All the [Dm7] Angels and the [F]Saints
     [G]Sing [Bbsus2]praise
     {end_of_chorus}
+    
     `.substring(1);
 
     GcViewer.init(false);
