@@ -23,7 +23,7 @@ Generates chord diagrams using HTML5 &lt;canvas&gt; and rewrites the music with 
 
 ## Usage
 
-`ChordSheetJS` is on npm, to install run:
+`GoChord Viewer` is on npm, to install run:
 
 ```sh
 $ npm i gochord-viewer
