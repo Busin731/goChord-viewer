@@ -1,8 +1,7 @@
 {
   "name": "gochord-viewer",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "main": "dist/gochord-viewer.bundle.js",
-  "types": "gochord-viewer.d.ts",
   "description": "A JavaScript library for parsing and formatting ChordPro songs.",
   "repository": {
     "type": "git",

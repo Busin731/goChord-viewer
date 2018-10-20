@@ -1,7 +1,7 @@
 /**
  * <ul>
  * <li>Project: GoChord Viewer for guitar (based on UkeGeeks' Scriptasaurus from Buz Carter)</li>
- * <li>Version: 0.1.2</li>
+ * <li>Version: 0.1.3</li>
  * <li>Author: Jaime Mora</li>
  * <li>License MIT</li>
  * </ul>
