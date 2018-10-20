@@ -1,7 +1,7 @@
 /**
  * <ul>
  * <li>Project: GoChord Viewer for guitar (based on UkeGeeks' Scriptasaurus from Buz Carter)</li>
- * <li>Version: 0.1.0</li>
+ * <li>Version: 0.1.2</li>
  * <li>Author: Jaime Mora</li>
  * <li>License MIT</li>
  * </ul>
@@ -16,3 +16,7 @@ import { css } from "./styles.css";
 
 export { Main } from './main';
 export { Settings } from './settings';
+export { ToolsLite } from './toolsLite';
+export { OverlapFixer } from './overlapFixer';
+export { Definitions } from './definitions';
+export { Transpose } from './transpose';

@@ -29,6 +29,25 @@ Generates chord diagrams using HTML5 &lt;canvas&gt; and rewrites the music with 
 $ npm i gochord-viewer
 ```
 
+Load with `require()`:
+
+```javascript
+var GoChordViewer = require("gochord-viewer");
+```
+
+or `import` (es6, typescript):
+
+```javascript
+import * as GoChordViewer from "gochord-viewer";
+```
+
+And call the Main class:
+
+```javascript
+GoChordViewer.Main.init(false);
+GoChordViewer.Main.run(chordSheet);
+```
+
 ## Demo
 
 Open demo/index.html on the browser to see a webpage example.
