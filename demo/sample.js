@@ -35,3 +35,4 @@ var chordSheet = `
 
 GoChordViewer.Main.init(false);
 GoChordViewer.Main.run(chordSheet);
+GoChordViewer.Main.doSetTheme('notebook');

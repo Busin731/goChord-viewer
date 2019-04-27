@@ -8,7 +8,8 @@ Inspired by: https://github.com/buzcarter/UkeGeeks with the following modificati
 
 - Adaptation for Guitar
 - Upgraded to ES6
-- Allows to send the chordpro songText instead of preloading it in the document
+- Allows to send the chordpro songText instead of preload it in the document
+- Import Themes class (it allows modify the viewer only, not the complet page body)
 - Beautify chord diagrams
 - Chord diagrams on right side
 - Bugs fixes
@@ -104,6 +105,19 @@ Essentially, it looks like this:
     [G]Sing [Bbsus2]praise
     {end_of_chorus}
 ```
+
+## Themes
+
+- normal
+- reversed
+- frosty
+- jellyBean
+- justBlack
+- krampus
+- western
+- pumpkin
+- notebook
+- zombie
 
 ## Contribute
 

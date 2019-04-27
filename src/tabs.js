@@ -61,8 +61,9 @@ export const Tabs = () => {
         for (const i in tabBlocks) {
             if (tabBlocks[i].className == "gcTabs") {
                 const s = tabBlocks[i].innerHTML;
-                tabBlocks[i].innerHTML = "";
-                loadBlocks(s, tabBlocks[i]);
+                const hideDiv = "<div style='display:none'>\n"
+                tabBlocks[i].innerHTML = hideDiv + s + "\n</div>";
+                loadBlocks(s.replace(hideDiv, ""), tabBlocks[i]);
             }
         }
     };

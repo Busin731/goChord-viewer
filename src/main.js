@@ -1,3 +1,5 @@
+import { css } from "./styles/main.css";
+
 import { ChordPainter } from "./chordPainter";
 import { ChordParser } from "./chordParser";
 import { CpmParser } from "./cpmParser";
@@ -8,6 +10,7 @@ import { OverlapFixer } from "./overlapFixer";
 import { Settings } from "./settings";
 import { Tabs } from "./tabs";
 import { ToolsLite } from "./toolsLite";
+import { Themes } from "./themes";
 
 /**
  * Finds page HTML elements & creates goChord objects;
@@ -91,6 +94,17 @@ export const Main = (() => {
         Definitions.useInstrument(offset);
     };
 
+    /**
+     * Change the color scheme -- requires changing CSS Class and reruning (to regenerate reference chord diagrams)
+     * @method doSetTheme
+     * @private
+     * @param value {string} value of the clicked value item
+     */
+    _public.doSetTheme = value => {
+        Themes.set(value);
+        _public.run();
+    };
+
     // song
 
     /**
@@ -105,20 +119,24 @@ export const Main = (() => {
         // read Music, find chords, generate HTML version of song:        
         const cpm = new CpmParser();
         cpm.init();
-        // JRM agrego condición
-        let song = '';
-        if (songText) {
-            song = cpm.parse(songText);
-        } else {
-            song = cpm.parse(handles.text.innerHTML);
-        }
-
-        Definitions.replace(song.defs);
 
         const chrdPrsr = new ChordParser();
         chrdPrsr.init();
-        handles.text.innerHTML = chrdPrsr.parse(song.body);
+
+        // JRM agrego condición
+        let song = new Data.song();
+        if (!songText) {
+            song.body = handles.text.innerHTML;
+            song.hasChords = true;
+        } else {
+            song = cpm.parse(songText);
+            Definitions.replace(song.defs);
+        }
+        let parsedChords = chrdPrsr.parse(song.body);
         song.chords = chrdPrsr.getChords();
+        if (songText) {
+            handles.text.innerHTML = parsedChords;
+        }
 
         // Draw the Chord Diagrams:
         const painter = new ChordPainter();

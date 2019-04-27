@@ -1,42 +1,45 @@
 {
-  "name": "gochord-viewer",
-  "version": "0.1.3",
-  "main": "dist/gochord-viewer.bundle.js",
-  "description": "A JavaScript library for parsing and formatting ChordPro songs.",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jrmora/goChord-viewer.git"
-  },
-  "engines": {
-    "node": ">=4.2.4"
-  },
-  "keywords": [
-    "chordpro",
-    "gochord",
-    "viewer",
-    "chord",
-    "diagrams",
-    "canvas",
-    "guitar"
-  ],
-  "author": "Jaime Mora (http://gochord.com)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/jrmora/goChord-viewer/issues"
-  },
-  "homepage": "https://github.com/jrmora/goChord-viewer#readme",
-  "scripts": {
-    "build": "webpack --mode=production"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.1.2",
-    "@babel/preset-env": "^7.1.0",
-    "babel-loader": "^8.0.4",
-    "clean-webpack-plugin": "^0.1.19",
-    "css-loader": "^1.0.0",
-    "style-loader": "^0.23.1",
-    "webpack": "^4.20.2",
-    "webpack-cli": "^3.1.2"
-  },
-  "dependencies": {}
+    "name": "gochord-viewer",
+    "version": "0.2.0",
+    "main": "dist/gochord-viewer.bundle.js",
+    "description": "A JavaScript library for parsing and formatting ChordPro songs.",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jrmora/goChord-viewer.git"
+    },
+    "engines": {
+        "node": ">=4.2.4"
+    },
+    "keywords": [
+        "chordpro",
+        "gochord",
+        "viewer",
+        "chord",
+        "diagrams",
+        "canvas",
+        "guitar"
+    ],
+    "author": "Jaime Mora (http://gochord.com)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/jrmora/goChord-viewer/issues"
+    },
+    "homepage": "https://github.com/jrmora/goChord-viewer#readme",
+    "scripts": {
+        "build": "webpack --mode=production",
+        "build-dev": "webpack --mode=none"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.1.2",
+        "@babel/preset-env": "^7.1.0",
+        "babel-loader": "^8.0.4",
+        "clean-webpack-plugin": "^0.1.19",
+        "css-loader": "^1.0.0",
+        "less": "^3.8.1",
+        "less-loader": "^4.1.0",
+        "style-loader": "^0.23.1",
+        "webpack": "^4.20.2",
+        "webpack-cli": "^3.1.2"
+    },
+    "dependencies": {}
 }

@@ -35,7 +35,7 @@ export const ToolsLite = (() => {
         element.className.match(getRegEx(className));
 
     _public.removeClass = (element, className) => {
-        if (_public.hasClass(element, className)) {
+        if (_public.hasClass(element, className)) {            
             const reg = getRegEx(className);
             element.className = element.className.replace(reg, " ");
         }

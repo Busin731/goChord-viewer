@@ -1,0 +1,390 @@
+/*
+ * Document   : Themes.css
+ * Author     : Buz Carter
+ * Description: Alternative color schemes.
+ */
+
+/* __________ Reverse __________ */
+.theme-reversed {
+  background-color: #000;
+  color: #fff;
+
+  pre {
+    color: #e9e9e9;
+  }
+  .scalablePrintArea {
+    background-color: transparent;
+    h5,
+    h6 {
+      border-left-color: #444;
+      color: #69f;
+    }
+  }
+  .ugsChorus {
+    border-left-color: #333;
+  }
+  .ugsChords {
+    code {
+      color: #333;
+      em {
+        color: #f42;
+      }
+    }
+  }
+  /* unique to the reversed theme we need to harden editor's UI */
+  .subNav a:hover {
+    background-color: #888;
+    color: #000;
+  }
+  .overlay {
+    background-color: #4e1c07;
+	//.box-shadow(none);
+// 	-moz-box-shadow: none;
+//   -webkit-box-shadow: none; // iOS <4.3 & Android <4.1
+//   box-shadow: none;
+    color: #000;
+  }
+}
+
+/* __________ Jelly Bean __________ */
+.theme-jellyBean {
+  pre {
+    color: inherit;
+  }
+  .scalablePrintArea {
+    color: #56a0a5;
+    font-family: "Comic Sans MS", "Marker Felt", cursive, sans-serif;
+    hgroup {
+      color: #ff9417;
+      text-align: center;
+    }
+    h1 {
+      color: #d20770;
+      font-family: "Peralta", cursive, sans-serif;
+      font-size: 2em;
+      text-shadow: 0.03125em 0.0625em 0 #ffffff, 0.09375em 0.125em 0 #f2e660;
+    }
+    h2 {
+      font-size: 1.1em;
+    }
+    h5,
+    h6 {
+      border-left-color: #f2e660;
+      color: #9c55ed;
+      font-family: inherit;
+      letter-spacing: 0.045em;
+    }
+  }
+  .ugsChorus {
+    border-left-color: #f2e660;
+    border-radius: 5px 0 0 5px;
+  }
+  .ugsChords {
+    code {
+      color: #333;
+      em {
+        color: #d20070;
+      }
+    }
+  }
+}
+
+/* __________ Western __________ */
+.theme-western {
+  .scalablePrintArea {
+    color: #88410a;
+    hgroup {
+      color: #88410a;
+      font-family: "Smokum", Arial, sans-serif;
+      text-align: center;
+    }
+    h1 {
+      color: #472b07;
+      font-family: inherit;
+      font-size: 3.3em;
+      text-shadow: 0.011em 0.037em 0 #ffffff, 0.055em 0.07em 0 #e5dcc0;
+    }
+    h2 {
+      font-size: 1.7em;
+    }
+    h5,
+    h6 {
+      border-left-color: #bed379;
+      color: #92a88c;
+      font-family: "Smokum", Arial, sans-serif;
+      font-size: 1.4em;
+      font-style: normal;
+      padding: 0;
+      text-indent: 1em;
+    }
+  }
+  .ugsChorus {
+    border-left-color: #bec481;
+    border-radius: 5px 0 0 5px;
+  }
+  .ugs-source-wrap pre {
+    color: inherit;
+  }
+}
+
+/* __________ Pumpkin (Halloween 1) __________ */
+.theme-pumpkin {
+  .scalablePrintArea {
+    color: #68391d;
+    hgroup {
+      color: #b14623;
+      text-align: center;
+    }
+    h1 {
+      color: #d3770e;
+      font-family: "Ranchers", Arial, sans-serif;
+      font-size: 3.2em;
+      line-height: 1.1;
+      text-shadow: 0.064em 0.044em 0 #edf8ce, -0.037em 0.044em 0 #edf8ce,
+        -0.074em 0.094em 0 #bed379, 0.074em 0.094em 0 #bed379;
+    }
+    h2 {
+      font-family: "Cherry Cream Soda", cursive, sans-serif;
+      font-size: 1.1em;
+    }
+    h5,
+    h6 {
+      border-left-color: #bed379;
+      color: #ffc501;
+      font-family: "Cherry Cream Soda", cursive, sans-serif;
+      font-size: 1.4em;
+      font-style: normal;
+      padding: 0;
+      text-indent: 1em;
+    }
+  }
+  .ugs-source-wrap pre {
+    color: inherit;
+  }
+  .ugsChorus {
+    border-left-color: #a0b74e;
+    border-radius: 5px 0 0 5px;
+  }
+  .ugsChords {
+    code em {
+      color: #fe9600;
+    }
+  }
+}
+
+/* __________ Zombie (Halloween II) __________ */
+.theme-zombie {
+  .scalablePrintArea {
+    color: #798666;
+    hgroup {
+      color: #902374;
+      text-align: center;
+    }
+    h1 {
+      color: #bed63a;
+      font-family: "Creepster", cursive, sans-serif;
+      font-size: 3.2em;
+      line-height: 1.1;
+      text-shadow: 0.002em 0.002em 0em #364000, 0.044em 0.044em 0 #9eb036,
+        -0.042em -0.014em 0 #8f2472, 0.087em 0.074em 0 #8f2472,
+        -0.074em 0.094em 0 #ca4f04, 0.074em 0.174em 0 #ca4f04;
+    }
+    h2 {
+      font-family: "Cherry Cream Soda", cursive, sans-serif;
+      font-size: 1.1em;
+      text-shadow: 0.12em 0.13em 0 #dbdae8;
+    }
+    h5,
+    h6 {
+      border-left-color: #e4dca4;
+      color: #798666;
+      font-family: "Peralta", cursive, sans-serif;
+      font-size: 1.4em;
+      font-style: normal;
+      padding: 0;
+      text-indent: 1em;
+      text-shadow: 0.03em 0.07em 0 #bed63a;
+    }
+  }
+  .ugs-source-wrap pre {
+    color: inherit;
+  }
+  .ugsChorus {
+    border-left-color: #cdc693;
+    border-radius: 6px 0 0 6px;
+  }
+  .ugsChords code em {
+    color: #dd1a52;
+  }
+}
+
+/* __________ Frosty __________ */
+.theme-frosty {
+  .scalablePrintArea {
+    color: #154286;
+    hgroup {
+      color: #6a97db;
+      text-align: center;
+    }
+    h1 {
+      color: #d5e2f5;
+      font-family: "Cherry Cream Soda", cursive, sans-serif;
+      font-size: 2.18em;
+      letter-spacing: 0.05em;
+      line-height: 1.1;
+      text-shadow: -0.064em -0.034em 0 #ffffff, 0.008em 0.008em 0 #a3e3d7,
+        0.009em -0.009em 0 #a3e3d7, 0.098em 0.115em 0 #154286,
+        0.064em 0.064em 0 #00183d, -0.114em -0.064em 0 #154286,
+        -0.114em 0 0 #154286, 0 -0.064em 0 #154286, -0.084em 0.064em 0 #154286,
+        0.064em -0.034em 0 #154286;
+    }
+    h2 {
+      font-family: "Ranchers", Arial, sans-serif;
+      font-size: 1.2em;
+    }
+    h5,
+    h6 {
+      border-left-color: #e3f7f3;
+      color: #80b7b1;
+      font-family: "Cherry Cream Soda", cursive, sans-serif;
+      font-size: 1.4em;
+      font-style: normal;
+      padding: 0;
+      text-indent: 0.6em;
+    }
+  }
+  .ugs-source-wrap pre {
+    color: inherit;
+  }
+  .ugsChorus {
+    border-left-color: #0896fe;
+    border-radius: 6px 0 0 6px;
+  }
+  .ugsChords code em {
+    color: #0896fe;
+  }
+}
+
+/* __________ Gruss vom Krampus __________ */
+/*
+http://www.colourlovers.com/palette/1374491/Merry_Christmas%E2%98%83
+http://www.colourlovers.com/palette/510474/vintage_Christmas
+*/
+.theme-krampus {
+  .scalablePrintArea {
+    color: #929867;
+    hgroup {
+      color: #929867;
+      text-align: center;
+    }
+    h1 {
+      color: #a22c27;
+      font-family: "Lobster", cursive, sans-serif;
+      font-size: 2.78em;
+      line-height: 1.1;
+      text-shadow: 0.036em 0.04em 0 #fcece8, 0.05em 0.08em 0 #4f2621,
+        0.02em 0.08em 0 #4f2621;
+    }
+    h2 {
+      font-family: "Peralta", cursive, sans-serif;
+      font-size: 1.2em;
+      text-shadow: 0.03em 0.03em 0 #ffffff, 0.08em 0.1em 0 #ebd592;
+    }
+    h5,
+    h6 {
+      border-left-color: #7b8055;
+      color: #a32c28;
+      font-family: "Peralta", cursive, sans-serif;
+      font-size: 1.2em;
+      font-style: normal;
+      padding: 0;
+      text-indent: 0.6em;
+    }
+  }
+  .ugs-source-wrap pre {
+    color: inherit;
+  }
+  .ugsChorus {
+    border-left-color: #b9c97e;
+    border-radius: 6px 0 0 6px;
+  }
+  .ugsChords code em {
+    color: #384030;
+  }
+}
+
+/* __________ Notebook __________ */
+.theme-notebook {
+  .scalablePrintArea {
+    color: #443377;
+    font-family: "Architects Daughter", Arial, sans-serif;
+    hgroup {
+      color: #2e2ecc;
+      font-family: inherit;
+      text-align: center;
+    }
+    h1 {
+      border-color: #e4e4ff;
+      border-style: solid;
+      border-width: 1px 0;
+      color: #252537;
+      font-family: "Permanent Marker", Arial, sans-serif;
+      font-size: 2em;
+      margin-bottom: 0.2em;
+    }
+    h2 {
+      border-bottom: 1px solid #e4e4ff;
+      font-size: 1.1em;
+    }
+    h5,
+    h6 {
+      border-left-color: #626283;
+      color: #2e2ecc;
+      font-family: "Permanent Marker", Arial, sans-serif;
+      font-size: 1.3em;
+      padding: 0;
+      text-indent: 0.7em;
+    }
+  }
+  .ugs-source-wrap pre {
+    color: inherit;
+  }
+  .ugsChorus {
+    border-left-color: #a4a0b2;
+    border-radius: 6px 0 0 6px;
+  }
+  .ugsChords code {
+    font-family: inherit;
+  }
+  /*
+	.ugsChords code em {
+		color: #384030;
+	}
+	*/
+}
+
+/* __________ Just BLack __________ */
+.theme-justBlack {
+  .ugs-source-wrap {
+    h5,
+    h6 {
+      color: #000;
+      /* first choice: museo slab 500 */
+      font-family: "Bree Serif", Arial, sans-serif;
+      font-style: normal;
+    }
+  }
+  .ugsChords code em {
+    color: #000;
+    font-weight: bold;
+  }
+  .scalablePrintArea hgroup,
+  .scalablePrintArea hgroup * {
+    /* first choice: museo slab 500 */
+    font-family: "Bree Serif", Arial, sans-serif;
+    font-style: normal;
+  }
+  .scalablePrintArea hgroup {
+    text-align: center;
+  }
+}

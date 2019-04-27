@@ -64,10 +64,15 @@ export const ChordParser = () => {
     var _findChords = text => {
         let i;
         let j;
-        const re = /\[(.+?)]/gim;
-        const m = text.match(re);
+        let re = /\[(.+?)]/gim;
+        let m = text.match(re);
         if (!m) {
-            return [];
+
+            //JRM: eval if text is already parsed 
+            re = /\-chordname="(.+?)"/gim;
+            m = text.match(re);
+
+            if (!m) { return []; }
         }
 
         // why not use associative array?
@@ -88,6 +93,7 @@ export const ChordParser = () => {
         // clean 'em
         for (j in chords) {
             chords[j] = chords[j].replace("[", "").replace("]", "");
+            chords[j] = chords[j].replace("-chordname=\"", "").replace("\"", "");
         }
         // done
         return chords;
